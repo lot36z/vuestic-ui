@@ -36,7 +36,7 @@
       </template>
 
       <va-dropdown-content>
-        <va-date-picker v-bind="datePickerProps" v-model="valueComputed">
+        <va-date-picker v-bind="datePickerProps" v-model="valueComputed" @update:view="$emit('update:view')">
           <template v-for="(_, name) in $slots" v-slot:[name]="bind">
             <slot :name="name" v-bind="bind" />
           </template>
